@@ -1,0 +1,38 @@
+.main-header {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  left: 0;
+  top: 0;
+  padding: $space-big;
+  width: 13.5rem;
+  height: 100vh;
+  background-color: $yellow;
+  z-index: 10;
+  .site-logo {
+    padding-top: $space-normal;
+  }
+  .main-navigation {
+    ul {
+      list-style: none;
+      .menu-item {
+        &.current-menu-item {
+          a {
+            color: $black;
+          }
+        }
+        a {
+          display: block;
+          margin-bottom: $space-small;
+          color: $brown;
+          font-weight: $bold;
+          &:hover {
+            color: $black;
+          }
+        }
+      }
+    }
+  }
+}

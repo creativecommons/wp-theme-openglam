@@ -1,0 +1,23 @@
+{
+  "name": "wp-theme-openglam",
+  "version": "2020.9.1",
+  "description": "Wordpress theme for Openglam website",
+  "main": "webpack.config.js",
+  "devDependencies": {
+    "bulma": "^0.9.0",
+    "copy-webpack-plugin": "^6.1.0",
+    "css-loader": "^4.2.2",
+    "mini-css-extract-plugin": "^0.11.0",
+    "node-sass": "^4.14.1",
+    "sass-loader": "^10.0.2",
+    "style-loader": "^1.2.1",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
+  },
+  "scripts": {
+    "build": "webpack --mode production",
+    "watch": "webpack --mode production --watch --progress"
+  },
+  "author": "Creative Commons",
+  "license": "MIT"
+}

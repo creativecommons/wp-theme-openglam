@@ -1,0 +1,11 @@
+/* 
+ * This changes the gutenberg editor width size
+ */
+
+.wp-block {
+    max-width: 720px;
+}
+
+.wp-block[data-align="wide"] {
+    max-width: 1280px;
+}

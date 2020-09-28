@@ -12,6 +12,16 @@ $size-6 : 1rem;
 $size-7 : .7rem;
 
 $title-size: $size-1;
+
+$radius: 0;
+
+// Spaces
+$space-big : 3.6rem;
+$space-normal : 1.6rem;
+$space-small : 1.4rem;
+$space-smaller : 1.1rem;
+$space-tiny : 0.5rem;
+
 // Color
 $orange : #CC3A00;
 $light-orange: #FFEFEB;
@@ -26,11 +36,6 @@ $primary : $orange;
 $success : $light-green;
 
 $link: $orange;
-
-$space-big : 3.6rem;
-$space-normal : 1.6rem;
-$space-small : 1.4rem;
-$space-tiny : 0.5rem;
 
 
 $brand-colors: (
@@ -55,8 +60,11 @@ $brand-colors: (
     background-color: $brand-color;
   }
   &.text-og-#{$color-namespace} {
+    &:hover {
+      border: 3px solid $brand-color;
+    }
     color: $brand-color;
-    h3 {
+    h3, h5 {
       color: $brand-color;
     }
   }

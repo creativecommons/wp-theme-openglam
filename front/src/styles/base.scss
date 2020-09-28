@@ -1,0 +1,38 @@
+.entry-content {
+  .content {
+    .og-numbers {
+      list-style: none;
+      counter-reset: og-counter;
+      li {
+        position: relative;
+        margin-bottom: $space-smaller;
+        counter-increment: og-counter;
+        &::before {
+          content: counter(og-counter);
+          position: absolute;
+          display: inline-block;
+          left: -2.2rem;
+          top: 0;
+          width: 1.8rem;
+          height: 1.8rem;
+          text-align: center;
+          line-height: 1.8rem;
+          font-weight: $bold;
+          font-size: 1rem;
+          background-color: $black;
+          color: $white;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+}
+
+.breadcrumbs {
+  margin-bottom: $space-big;
+  font-size: $size-7;
+  font-weight: $bold;
+  .icon {
+    margin: 0 $space-tiny;
+  }
+}

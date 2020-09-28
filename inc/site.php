@@ -25,4 +25,23 @@ class openGlam {
       $out .= '</header>';
     return $out;  
   }
+  static function get_breadcrumb() {
+    $current = get_queried_object();
+    $current_page = $current->post_title;
+    $breadcrumbs = '<div class="breadcrumbs">';
+    if ( is_page() ) {
+      $breadcrumbs .= '<a href="'.get_bloginfo('url').'">Home</a> <i class="icon chevron-right"></i> ';
+      if ( $current->post_parent ) {
+        $parent_id = $current->post_parent;
+        while ( $parent_id != 0 ) {
+          $page = get_page( $parent_id );
+          $breadcrumbs .= ' <a href="'.get_permalink( $page->ID ).'">' . get_the_title( $page->ID ) . '</a> <i class="icon chevron-right"></i> ';
+          $parent_id = $page->post_parent;
+        }
+      }
+      $breadcrumbs .= $current_page;
+    }
+    $breadcrumbs .= '</div>';
+    return $breadcrumbs;
+  }
 }

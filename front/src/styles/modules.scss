@@ -29,14 +29,36 @@
 }
 
 .card {
+  margin-bottom: $space-normal;
+  &.number-card {
+    display: block;
+    padding: $size-3;
+    border: 3px solid transparent;
+    .number {
+      display: block;
+      margin-bottom: 1.9rem;
+      color: $black;
+      font-weight: $bold;
+      font-size: $size-7;
+    }
+    @each $color-namespace, $brand-color in $brand-colors {
+      @include color-classes-inherited($color-namespace, $brand-color);
+    }
+    &.no-link {
+      border: 3px solid $gray-light;
+    }
+  }
   &.simple-card {
     display: block;
     padding: $size-3;
+    border: 3px solid transparent;
     @each $color-namespace, $brand-color in $brand-colors {
       @include color-classes-inherited($color-namespace, $brand-color);
     }
     h3 {
       text-transform: uppercase;
+      font-size: 1.3rem;
+      font-weight: $bold;
     }
     p {
       color: $black;

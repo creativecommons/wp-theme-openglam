@@ -21,6 +21,7 @@ define( 'THEME_JS', THEME_URI . '/assets/js' );
 */
 include TEMPLATEPATH . '/inc/customizer.php';
 include TEMPLATEPATH . '/inc/site.php';
+include TEMPLATEPATH . '/inc/widgets.php';
 /**
  * Images
  * ------
@@ -34,6 +35,29 @@ add_image_size( 'squared', 300, 300, true );
 add_image_size( 'landscape-small', 550, 300, true );
 add_image_size( 'landscape-medium', 740, 416, true );
 add_image_size( 'landscape-featured', 1100, 170, true );
+
+/**
+*  THEME SIDEBARS
+*  Default sidebars availables
+*/
+$mandatory_sidebars = array(
+	'Footer' => array(
+		'name' => 'footer',
+	)
+);
+
+foreach ( $mandatory_sidebars as $sidebar => $id_sidebar ) {
+	register_sidebar(
+		array(
+			'name'          => $sidebar,
+			'id'            => $id_sidebar['name'],
+			'before_widget' => '<section id="%1$s" class="widget %2$s">' . "\n",
+			'after_widget'  => '</section>',
+			'before_title'  => '<header class="widget-header"><h3 class="widget-title">',
+			'after_title'   => '</h3></header>',
+		)
+	);
+}
 
 /**
  * Theme singleton class
@@ -152,6 +176,7 @@ class Site {
 	function enqueue_scripts() {
 		// front-end scripts
 		wp_enqueue_script( 'jquery', true );
+		wp_enqueue_script( 'vocabulary', THEME_JS . '/script.js', array('jquery'), self::theme_ver, true );
 	}
 }
 

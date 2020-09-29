@@ -10,6 +10,9 @@
         text-decoration: underline;
       }
     }
+    h2 {
+      font-size: 2.44rem;
+    }
     p {
       margin-bottom: $space-normal;
       &.subtitle {
@@ -24,7 +27,7 @@
       counter-reset: og-counter;
       li {
         position: relative;
-        margin-bottom: $space-smaller;
+        margin-bottom: 1.8rem;
         counter-increment: og-counter;
         &::before {
           content: counter(og-counter);

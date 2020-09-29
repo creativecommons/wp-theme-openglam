@@ -37,7 +37,9 @@
 }
 
 .card {
-  margin-bottom: $space-normal;
+  @include touch() {
+    margin-bottom: $space-normal;
+  }
   &:hover {
     text-decoration: none !important;
   }

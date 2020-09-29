@@ -70,6 +70,8 @@ $brand-colors: (
     color: $brand-color;
     h3, h5 {
       color: $brand-color;
+      font-weight: $bold;
+      line-height: 1.4;
     }
   }
 }

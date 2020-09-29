@@ -132,6 +132,7 @@
 }
 .main-footer {
   margin-top: 6.6rem;
+  margin-bottom: 3.8rem;
   @include touch() {
     padding-left: $space-normal;
     padding-right: $space-normal;

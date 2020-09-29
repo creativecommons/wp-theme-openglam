@@ -15,6 +15,7 @@
     padding-top: $space-normal;
   }
   .main-navigation {
+    width: 100%;
     ul {
       list-style: none;
       .menu-item {
@@ -98,6 +99,18 @@
           }
         }
       }
+    }
+  }
+}
+.home {
+  .main-content {
+    padding-left: 0;
+    padding-right: 0;
+    .entry-content {
+      @include touch() {
+        padding-left: $space-normal;
+        padding-right: $space-normal;
+      }    
     }
   }
 }

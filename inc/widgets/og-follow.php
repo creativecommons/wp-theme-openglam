@@ -17,7 +17,7 @@ class WP_Widget_Follow extends WP_Widget {
 		echo '<div class="widget-content">';
     echo '<div class="follow-icons">';
     if (!empty($instance['slack'])) {
-      echo '<a href="'.$instance['slack'].'" class="social slack button is-rounded is-black">Slack Community</a>';
+      echo '<a href="'.$instance['slack'].'" class="social slack is-black"><i class="icon slack"></i></a>';
     }
     if (!empty($instance['facebook'])) {
       echo '<a href="'.$instance['facebook'].'" class="social facebook is-black"><i class="icon facebook"></i></a>';
@@ -27,6 +27,9 @@ class WP_Widget_Follow extends WP_Widget {
     }
     if (!empty($instance['medium'])) {
       echo '<a href="'.$instance['medium'].'" class="social medium is-black"><i class="icon medium"></i></a>';
+    }
+		if (!empty($instance['mail'])) {
+      echo '<a href="mailto:'.$instance['mail'].'" class="social mail is-black"><i class="icon envelope"></i></a>';
     }
     echo '</div>';
 		echo '</div>';
@@ -43,6 +46,7 @@ class WP_Widget_Follow extends WP_Widget {
 		echo '<p><label for="' . $this->get_field_id( 'facebook' ) . '">Facebook URL: <input type="text" name="' . $this->get_field_name( 'facebook' ) . '" id="' . $this->get_field_id( 'facebook' ) . '" value="' . $instance['facebook'] . '" class="widefat" /></label></p>';
 		echo '<p><label for="' . $this->get_field_id( 'twitter' ) . '">Twitter URL: <input type="text" name="' . $this->get_field_name( 'twitter' ) . '" id="' . $this->get_field_id( 'twitter' ) . '" value="' . $instance['twitter'] . '" class="widefat" /></label></p>';
     echo '<p><label for="' . $this->get_field_id( 'medium' ) . '">Medium URL: <input type="text" name="' . $this->get_field_name( 'medium' ) . '" id="' . $this->get_field_id( 'medium' ) . '" value="' . $instance['medium'] . '" class="widefat" /></label></p>';
+		echo '<p><label for="' . $this->get_field_id( 'mail' ) . '">Email: <input type="text" name="' . $this->get_field_name( 'mail' ) . '" id="' . $this->get_field_id( 'mail' ) . '" value="' . $instance['mail'] . '" class="widefat" /></label></p>';
 
 	}
 }

@@ -1,5 +1,18 @@
 .entry-content {
+  .title {
+    font-weight: $bold;
+  }
   .content {
+    a {
+      color: $link;
+      &:hover {
+        color: $link;
+        text-decoration: underline;
+      }
+    }
+    p {
+      margin-bottom: $space-normal;
+    }
     .og-numbers {
       list-style: none;
       counter-reset: og-counter;

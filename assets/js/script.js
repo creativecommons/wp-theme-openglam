@@ -1,16 +1,3 @@
-jQuery(function($) {
-    function equalHeight(group) {
-        var tallest = 0;
-        group.each(function() {
-           var thisHeight = $(this).height();
-           if(thisHeight > tallest) {
-              tallest = thisHeight;
-           }
-        });
-        group.height(tallest);
-    }
-    equalHeight($(".equalheight"))
-});
 jQuery(document).ready(function($){
   var equalHeight = function(group) {
         var tallest = 0;

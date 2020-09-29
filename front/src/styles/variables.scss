@@ -31,6 +31,7 @@ $brown : #BD7800;
 $yellow : #FFF2DF;
 $gray-light : #DBDBDB;
 $grey-dark : #353535;
+$gray: #b0b0b0;
 $black : #000000;
 
 $primary : $orange;
@@ -38,6 +39,7 @@ $success : $light-green;
 
 $link: $orange;
 $title-color: $black;
+$body-line-height: 1.6;
 
 
 $brand-colors: (
@@ -68,9 +70,17 @@ $brand-colors: (
     color: $brand-color;
     h3, h5 {
       color: $brand-color;
+      font-weight: $bold;
+      line-height: 1.4;
     }
   }
 }
 @each $color-namespace, $brand-color in $brand-colors {
   @include color-classes($color-namespace, $brand-color);
+}
+
+@mixin placeholder {
+  &.placeholder { @content }
+  &:-moz-placeholder { @content }
+  &::-webkit-input-placeholder { @content }
 }

@@ -10,15 +10,24 @@
         text-decoration: underline;
       }
     }
+    h2 {
+      font-size: 2.44rem;
+    }
     p {
       margin-bottom: $space-normal;
+      &.subtitle {
+        font-weight: $bold;
+        margin-top: -1rem;
+        margin-bottom: 4rem;
+        font-size: 1.4rem;
+      }
     }
     .og-numbers {
       list-style: none;
       counter-reset: og-counter;
       li {
         position: relative;
-        margin-bottom: $space-smaller;
+        margin-bottom: 1.8rem;
         counter-increment: og-counter;
         &::before {
           content: counter(og-counter);
@@ -43,7 +52,7 @@
 
 .breadcrumbs {
   margin-bottom: $space-big;
-  font-size: $size-7;
+  font-size: 0.81rem;
   font-weight: $bold;
   .icon {
     margin: 0 $space-tiny;

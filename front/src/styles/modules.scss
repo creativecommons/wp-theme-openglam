@@ -68,10 +68,11 @@
     }
     h3 {
       text-transform: uppercase;
-      font-size: 1.3rem;
+      font-size: 1.5rem;
       font-weight: $bold;
     }
     p {
+      margin-bottom: 0;
       color: $black;
       font-size: $size-5;
     }

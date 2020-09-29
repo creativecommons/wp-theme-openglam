@@ -12,6 +12,12 @@
     }
     p {
       margin-bottom: $space-normal;
+      &.subtitle {
+        font-weight: $bold;
+        margin-top: -1rem;
+        margin-bottom: 4rem;
+        font-size: 1.4rem;
+      }
     }
     .og-numbers {
       list-style: none;
@@ -43,7 +49,7 @@
 
 .breadcrumbs {
   margin-bottom: $space-big;
-  font-size: $size-7;
+  font-size: 0.81rem;
   font-weight: $bold;
   .icon {
     margin: 0 $space-tiny;

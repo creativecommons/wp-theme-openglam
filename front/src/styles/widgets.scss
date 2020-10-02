@@ -26,6 +26,17 @@
         }
       }
     }
+    @include mobile() {
+      .widget-content {
+        .follow-icons {
+          .social {
+            .icon {
+              font-size: 1.9rem;
+            }
+          }
+        }
+      }
+    }
   }
   &.newsletter {
     .widget-byline {
@@ -62,10 +73,29 @@
         bottom: 0;
       }
     }
+    @include mobile() {
+      margin-bottom: 2rem;
+      .widget-title {
+        font-size: .94rem;
+      }
+      .input {
+        padding-top: .5rem;
+        padding-bottom: .5rem;
+      }
+      .button {
+        padding-top: .5rem;
+        padding-bottom: .5rem;
+      }
+    }
   }
   &.support {
     p {
       padding-bottom: $space-small;
+    }
+    @include mobile() {
+      img {
+        width: 10rem;
+      }
     }
   }
 }

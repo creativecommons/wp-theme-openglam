@@ -47,8 +47,20 @@
     display: flex;
     position: relative;
     padding: $space-smaller;
+    margin-bottom: 0;
     background-color: $yellow;
     z-index: 20;
+    .level-left {
+      .site-logo {
+        a {
+          display: flex;
+          align-items: center;
+          img {
+            width: 70px;
+          }
+        }
+      }
+    }
     .level-right {
       margin-top: 0;
       .icon {

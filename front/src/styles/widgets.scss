@@ -39,6 +39,9 @@
     }
   }
   &.newsletter {
+    .widget-title {
+      margin-bottom: 1.5rem;
+    }
     .widget-byline {
       display: block;
       font-size: 0.83rem;
@@ -53,8 +56,8 @@
       }
     }
     .button {
-      padding-top: 1.1rem;
-      padding-bottom: 1.1rem;
+      padding-top: .7rem;
+      padding-bottom: .7rem;
       height: auto;
       font-weight: $bold;
     }

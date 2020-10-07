@@ -10,29 +10,13 @@ class WP_Widget_Newsletter_Form extends WP_Widget {
 	}
 
 	function widget( $args, $instance ) {
-    $subscribe_url = 'https://lists.wikimedia.org/mailman/subscribe/open-glam';
-		$button_text = ( ! empty( $instance['button_text'] ) ) ? esc_attr( $instance['button_text'] ) : 'Join';
-		$placeholder = ( ! empty( $instance['placeholder'] ) ) ? esc_attr( $instance['placeholder'] ) : 'Enter your email';
+		$button_text = ( ! empty( $instance['button_text'] ) ) ? esc_attr( $instance['button_text'] ) : 'Subscribe to our updates';
+		$url = ( ! empty( $instance['url'] ) ) ? esc_attr( $instance['url'] ) : 'https://lists.wikimedia.org/mailman/listinfo/open-glam';
 		echo '<div class="widget newsletter">';
 		if ( ! empty( $instance['title'] ) ) {
 			echo '<h4 class="b-header widget-title">' . esc_attr( $instance['title'] ) . '</h4>';
 		}
-		if ( ! empty( $instance['byline'] ) ) {
-			echo '<small class="widget-byline">' . esc_attr( $instance['byline'] ) . '</small>';
-		}
-		echo '<form method="post" action="'.$subscribe_url.'">';
-		echo '<div class="field has-addons">';
-		echo '<div class="control has-icons-left">';
-		echo '<input type="text" class="input" name="email" placeholder="' . $placeholder . '" value="" />';
-    echo '<span class="icon-container">';
-    echo '<i class="icon envelope"></i>';
-    echo '</span>';
-		echo '</div>';
-		echo '<div class="control">';
-		echo '<input type="submit" alt="Search" name="name="email-button" class="button small is-primary" value="' . $button_text . '" />';
-		echo '</div>';
-		echo '</div>';
-		echo '</form>';
+		echo '<a href="'.$url.'" class="button is-rounded is-primary">'.$button_text.'</a>';
 		echo '</div>';
 	}
 
@@ -43,8 +27,7 @@ class WP_Widget_Newsletter_Form extends WP_Widget {
 	function form( $instance ) {
 		extract( $instance );
 		echo '<p><label for="' . $this->get_field_id( 'title' ) . '">Title: <input type="text" name="' . $this->get_field_name( 'title' ) . '" id="' . $this->get_field_id( 'title' ) . '" value="' . $instance['title'] . '" class="widefat" /></label></p>';
-		echo '<p><label for="' . $this->get_field_id( 'byline' ) . '">Byline: <input type="text" name="' . $this->get_field_name( 'byline' ) . '" id="' . $this->get_field_id( 'byline' ) . '" value="' . $instance['byline'] . '" class="widefat" /></label></p>';
-		echo '<p><label for="' . $this->get_field_id( 'placeholder' ) . '">Placeholder: <input type="text" name="' . $this->get_field_name( 'placeholder' ) . '" id="' . $this->get_field_id( 'placeholder' ) . '" value="' . $instance['placeholder'] . '" class="widefat" /></label></p>';
+		echo '<p><label for="' . $this->get_field_id( 'url' ) . '">url: <input type="text" name="' . $this->get_field_name( 'url' ) . '" id="' . $this->get_field_id( 'url' ) . '" value="' . $instance['url'] . '" class="widefat" /></label></p>';
 		echo '<p><label for="' . $this->get_field_id( 'button_text' ) . '">Button Text: <input type="text" name="' . $this->get_field_name( 'button_text' ) . '" id="' . $this->get_field_id( 'button_text' ) . '" value="' . $instance['button_text'] . '" class="widefat" /></label></p>';
 
 	}

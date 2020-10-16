@@ -49,7 +49,10 @@
         }
       }
       &.big-paragraph {
+        padding: 2.8rem;
+        margin-bottom: $space-big;
         font-size: 1.6rem;
+        border: 3px solid $gray-light;
         @include mobile() {
           font-size: 1.1rem;
         }
